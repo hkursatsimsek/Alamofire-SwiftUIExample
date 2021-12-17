@@ -10,21 +10,11 @@ import Alamofire
 
 
 struct ContentView: View {
-    var categoryRepository = CategoryRepository()
-    @State var categoryList = [CategoryModel]()
-    
     var body: some View {
-        VStack{
-            List(categoryList, id:\.name) { item in
-                Text(item.name)
-            }
-            
-        }.onAppear() {
-            categoryRepository.getAll { categories in
-                categoryList = categories
-                print(categoryList)
-            }
-        }
+//        CategoryListScreen()
+        AddCategoryScreen()
+//        SupplierListScreen()
+//        ProductListScreen()
             
     }
 }
